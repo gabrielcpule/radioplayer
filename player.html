@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>streams.com.br</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<script src="skin/jquery-3.2.1.min.js"></script>
+		<link href="skin/jplayer.skin.css" media="screen" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="skin/jquery.jplayer.min.js"></script>
+		<script type="text/javascript" src="skin/jplayer.skin.min.js"></script>
+		
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#player1").flatie({
+				
+					media: {
+						title: "Radio Independente FM",
+						m4a: "http://independente.streams.com.br:7813/stream"
+					},
+					
+					// Extra Settings
+                    swfPath: "skin/jquery.jplayer.swf",
+                    solution: "html, flash",
+					supplied: "m4a",
+					volume: "0.5",
+                    smoothPlayBar: true,
+                    autoplay: true,
+					
+					// CSS Selectors
+					size: {
+                        width: "100%",
+                        height: "auto"
+                    },
+					cssSelectorAncestor: '#player1',
+                    cssSelector: {
+                        play: ".play",
+                        pause: ".pause",
+                        seekBar: ".seekBar",
+                        playBar: ".playBar",
+                        mute: ".right-volume .mute",
+                        unmute: ".right-volume .unmute",
+                        volumeBar: ".volume-control",
+                        volumeBarValue: ".volume-control .volume-value",
+                        currentTime: ".timer.current",
+                        //duration: ".timer.duration",
+                        duration: "",
+                        //restoreScreen: ".smallscreen",
+                        gui: ".controls",
+                        //noSolution: ".noSolution"
+                    },
+								
+				});
+
+			});
+		</script>
+	</head>
+	
+	<body style="font-family: 'Segoe UI', Verdana; background: #f9f9f9;">
+		<div style="display: block; margin: 0 auto; max-width: 300px;">
+
+			<!-- Player Container Div -->
+			<div id="player1" class="jPlayer audioPlayer light"></div>
+
+
+		</div>
+	</body>
+</html>
